@@ -40,7 +40,7 @@ type Aluno = {
 type Estudante = Aluno & {
     matricula: number;
 };
-
+//aaa
 let estudante: Estudante = {
     nome: "Maria",
     idade: 20,
