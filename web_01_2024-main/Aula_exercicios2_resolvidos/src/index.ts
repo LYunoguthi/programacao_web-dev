@@ -30,7 +30,14 @@ class carro{
         return this.cor;
         
     }
+
+    get getIdade(): number{
+        let date = new Date().getFullYear();
+        return date - this.ano;
+    }
 }
 
 const meuCarro = new carro(1950,"VW" ,"Fusca" ,"VerdeNeon");
-console.log (meuCarro);
+
+//console.log (meuCarro);
+console.log (meuCarro.getIdade);
