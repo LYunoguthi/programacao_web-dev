@@ -1,8 +1,8 @@
 class carro{
-    ano: number;
-    marca: string;
-    modelo: string;
-    cor: string;
+    private ano: number;
+    private marca: string;
+    private modelo: string;
+    private cor: string;
 
     constructor(ano:number, marca:string, modelo:string, cor:string){
         this.ano=ano;
@@ -11,23 +11,26 @@ class carro{
         this.cor=cor;
     }
 
-    get ano():number{
-        return this.number;
+    get getAno():number{
+        return this.ano;
         
     }
 
-    get marca():string{
+    get getMarca():string{
         return this.marca;
         
     }
 
-    get modelo():string{
+    get getModelo():string{
         return this.modelo;
         
     }
 
-    get cor():string{
+    get getCor():string{
         return this.cor;
         
     }
 }
+
+const meuCarro = new carro(1950,"VW" ,"Fusca" ,"VerdeNeon");
+console.log (meuCarro);
