@@ -41,3 +41,5 @@ const meuCarro = new carro(1950,"VW" ,"Fusca" ,"VerdeNeon");
 
 //console.log (meuCarro);
 console.log (meuCarro.getIdade);
+
+//aeaeae eh eh eh ohohohohohohoh
