@@ -29,4 +29,27 @@ export class ProductRepository{
         }
     }
     
+    deleteProduct(id: number) {
+        try {
+            const resultado = executarComandoSQL(
+                "DELETE FROM Vendas.Product WHERE ID = ?", [id], this.imprimeResult
+            );
+            console.log('Produto deletado com sucesso:', resultado);
+        } catch (err) {
+            console.error('Erro ao deletar o produto:', err);
+        }
+    }
+
+    updateProduct(name: string, price: number) {
+        try {
+            const resultado = executarComandoSQL(
+                "INSERT INTO vendas.Product (name, price) VALUES (?, ?)",
+                [name, price], this.imprimeResult
+            );
+            console.log('Produto alterado com sucesso:', resultado);
+        } catch (err) {
+            console.error('Erro ao alterar o produto:', err);
+        }
+    }
+
 }
